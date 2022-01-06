@@ -1,0 +1,10 @@
+
+.toggle {
+
+    &__button {
+        border-radius: 50%;
+        width: rem(16);
+        height: rem(16);
+        color: var(--toggle);
+    }
+}
