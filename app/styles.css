@@ -84,8 +84,30 @@ h1 {
     }
 }
 
-input {
+input[radio] {
     opacity: 0;
+    margin: 0;
+}
+
+#light:checked {
+    right: 3px;
+    left: 100%;
+}
+
+label[for="dark"] {
+    grid-column: 1 / 2;
+    justify-self: start;
+}
+
+label[for="system"] {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+}
+
+label[for="light"] {
+    grid-column: 3 / 4;
+    justify-self: end;
 }
 
 /* icons */
@@ -98,23 +120,36 @@ input {
 
 .toggle {
     border: none;
-    margin-top: 36px;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .toggle__button {
-
-}
-
-.toggle input[type="radio"] {
-    /*not sure how to select radio only for CSS, need to research*/
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 100%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--dark-bg);
 }
 
 .toggle__background {
-    background: linear-gradient(225deg)
+    height: 100%;
+    background: linear-gradient(225deg, var(--toggle-bg-start), var(--toggle-bg-end));
+    display: block;
+    border-radius: 12px;
+    position: absolute;
+    width: 80%;
+    top: 0;
+    pointer-events: none;
 }
 
 .toggle__wrapper {
-    background-color: ;
+    height: 24px;
+    position: relative;
 }
 
 
