@@ -11,7 +11,7 @@
     --toggle-bg-start: hsl(210, 78%, 56%);
     --toggle-bg-end: hsl(146, 68%, 55%);
     --toggle: hsl(230, 22%, 74%);
-    --dark-gb: hsl(230, 17%, 14%);
+    --dark-bg: hsl(230, 17%, 14%);
     --dark-top-bg: hsl(232, 19%, 15%);
     --dark-card: hsl(228, 28%, 20%);
     --dark-text1: hsl(228, 34%, 66%);
@@ -40,6 +40,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-inter);
+    background: var(--dark-bg);
+    color: var(--dark-text2);
 }
 
 a, a:visited a:active {
@@ -50,20 +52,40 @@ a, a:visited a:active {
 
 h1, h2, h3 {
     margin-top: 0;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 28px;
+
+    }
 }
 
 /* layout */
 
 .container {
     max-width: 1110px;
-    background-color: blue;
     padding: 0 25px;
+    margin: 0 auto 46px;
 }
 
 @media screen and (min-width: 992px){
     .container {
         padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+}
+
+input {
+    opacity: 0;
 }
 
 /* icons */
@@ -76,6 +98,7 @@ h1, h2, h3 {
 
 .toggle {
     border: none;
+    margin-top: 36px;
 }
 
 .toggle__button {
@@ -87,16 +110,28 @@ h1, h2, h3 {
 }
 
 .toggle__background {
-
+    background: linear-gradient(225deg)
 }
 
 .toggle__wrapper {
-
+    background-color: ;
 }
 
 
 /* header */
 
 .header {
-    
+
+}
+
+.header__subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-text1);
+}
+
+@media screen and (min-width: 992px){
+    .header {
+        margin-top: 36px;
+    }
 }
