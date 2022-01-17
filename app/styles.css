@@ -1,5 +1,6 @@
 
 :root {
+
     /* colors */
     --limegreen: hsl(163, 72%, 41%);
     --brightred: hsl(356, 69%, 56%);
@@ -73,6 +74,8 @@ h1 {
     max-width: 1110px;
     padding: 0 25px;
     margin: 0 auto 46px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media screen and (min-width: 992px){
@@ -84,43 +87,184 @@ h1 {
     }
 }
 
-input[radio] {
+input[type="radio"] {
     opacity: 0;
     margin: 0;
 }
 
-#light:checked {
-    right: 3px;
-    left: 100%;
+input[type="radio"]:focus ~ .toggle__button {
+    border: 2px solid
 }
+
+
+/*  */
+/*  */
+/*  */
+
+#dark:checked ~ .toggle__button {
+    right: 100%;
+    left: 3px;
+  }
+
+#light:checked ~ .toggle__button {
+    left: calc(100% - 21px);
+    right: 3px;
+  }
+
+#system:checked ~ .toggle__button {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%);
+  }
 
 label[for="dark"] {
     grid-column: 1 / 2;
-    justify-self: start;
+    justify-self: center;
 }
 
 label[for="system"] {
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 3 / 3;
     justify-self: center;
+    padding-top: 10px;
 }
 
 label[for="light"] {
     grid-column: 3 / 4;
-    justify-self: end;
+    justify-self: center;
 }
 
 /* icons */
 
-/* largeCards */
+/* card */
 
-/* smallCards */
+.card {
+    background: var(--dark-card);
+    width: 255px;
+    text-align: center;
+    padding: 25px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        margin-bottom: 0;
+        width: 22.5%;
+    }
+}
+
+.card--fb {
+    border-top: 5px solid var(--facebook);
+}
+
+.card--insta {
+    border-top: 5px solid pink
+}
+
+.card--youtube {
+    border-top: 5px solid var(--youtube);
+}
+
+.card--twitter {
+    border-top: 5px solid var(--twitter);
+}
+
+.card__change {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card__change--up {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--limegreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__change--down {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--brightred);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__count {
+    color: var(--dark-text2);
+    align-items: center;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.card__count--bg {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.card__count--sm {
+
+}
+
+.card__followers {
+    margin-top: 4px;
+}
+
+.card__icon {
+    margin-right: 8px;
+}
+
+.card__icon--fb {
+
+}
+
+.card__icon--insta {
+
+}
+
+.card__icon--youtube {
+
+}
+
+.card__icon--twitter {
+
+}
+
+.card__label {
+    color: var(--dark-text1);
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.card__number {
+    margin-left: 4px;
+}
+
+.card__platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.card__username {
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--dark-text1);
+}
 
 /* toggle */
 
 .toggle {
     border: none;
-    margin-top: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -134,6 +278,7 @@ label[for="light"] {
     height: 18px;
     border-radius: 50%;
     background-color: var(--dark-bg);
+    transition: all 150ms ease-in-out;
 }
 
 .toggle__background {
@@ -142,7 +287,7 @@ label[for="light"] {
     display: block;
     border-radius: 12px;
     position: absolute;
-    width: 80%;
+    width: 100%; /*48 px wide with just two options*/
     top: 0;
     pointer-events: none;
 }
@@ -156,7 +301,7 @@ label[for="light"] {
 /* header */
 
 .header {
-
+    align-items: center;
 }
 
 .header__subtitle {
@@ -166,6 +311,7 @@ label[for="light"] {
 }
 
 @media screen and (min-width: 992px){
+    
     .header {
         margin-top: 36px;
     }

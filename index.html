@@ -21,48 +21,90 @@
 
 <body>
 
-<div class="container">
+<section class="container">
  
-  <div class="header">
-    <h1>Social Media Dashboard</h1>
-    <span class="header__subtitle">Total Followers: 23,004</span>
-  </div>
+<div class="header">
+  <h1>Social Media Dashboard</h1>
+  <span class="header__subtitle">Total Followers: 23,004</span>
+</div>
 
-  <!-- <fieldset
-  class="toggle toggle__header"
-  aria-label="theme toggle"
-  role="radiogroup">
-
-  <label for="dark">On</label>
-  
+<fieldset class="toggle header" aria-label="theme toggle" role="radiogroup">
+  <label for="dark" Dark Mode class="visually-hidden">Dark</label>
   <div class="toggle__wrapper">
     <input type="radio" name="theme" id="dark" />
-    <input type="radio" name="theme" id="light" />
+    <input type="radio" name="theme" id="system" />
+    <input type="radio" name="theme" id="light" checked />
     <span aria-hidden="true" class="toggle__background"></span>
     <span aria-hidden="true" class="toggle__button"></span>
   </div>
-  <label for="light" class="visually-hidden">Dark Mode Off</label>
-  
-  </fieldset> -->
-
-  <fieldset
-  class="toggle header"
-  aria-label="theme toggle"
-  role="radiogroup"
->
-  <label for="dark"
-    >Dark Mode <span class="visually-hidden">On</span></label
-  >
-  <div class="toggle__wrapper">
-    <input type="radio" name="theme" id="dark" />
-    <input type="radio" name="theme" id="light" checked/>
-    <span aria-hidden="true" class="toggle__background"></span>
-    <span aria-hidden="true" class="toggle__button"></span>
-  </div>
-  <label for="light" class="visually-hidden">Dark Mode Off</label>
+  <label for="system" class="visually-hidden">System</label>
+  <label for="light" class="visually-hidden">Light</label>
 </fieldset>
 
-</div>
+</section>
+
+<section class="container">
+
+  <div class="card card--fb">
+    <div class="card__platform">
+        <img class="card__icon" src="/images/icon-facebook.svg" alt="facebook"/>
+      <div class="card__username">@nathanf</div>
+    </div>
+    <div class="card__count--bg">
+      1987
+      <div class="card__label">Followers</div>
+    </div>
+    <div class="card__change--up">
+      <img src="/images/icon-up.svg" alt="up arrow">
+      <div class="card__number">12 Today</div>
+    </div>
+  </div>
+
+  <div class="card card--twitter">
+    <div class="card__platform">
+        <img class="card__icon" src="/images/icon-twitter.svg" alt="twitter"/>
+      <div class="card__username">@nathanf</div>
+    </div>
+    <div class="card__count--bg">
+      1987
+      <div class="card__label">Followers</div>
+    </div>
+    <div class="card__change--down">
+      <img src="/images/icon-down.svg" alt="down arrow">
+      <div class="card__number">12 Today</div>
+    </div>
+  </div>
+
+  <div class="card card--insta">
+    <div class="card__platform">
+        <img class="card__icon" src="/images/icon-instagram.svg" alt="instagram"/>
+      <div class="card__username">@nathanf</div>
+    </div>
+    <div class="card__count--bg">
+      1987
+      <div class="card__label">Followers</div>
+    </div>
+    <div class="card__change--up">
+      <img src="/images/icon-up.svg" alt="up arrow">
+      <div class="card__number">12 Today</div>
+    </div>
+  </div>
+
+  <div class="card card--youtube">
+    <div class="card__platform">
+        <img class="card__icon" src="/images/icon-youtube.svg" alt="youtube"/>
+      <div class="card__username">@nathanf</div>
+    </div>
+    <div class="card__count--bg">
+      1987
+      <div class="card__label">Followers</div>
+    </div>
+    <div class="card__change--up">
+      <img src="/images/icon-up.svg" alt="up arrow">
+      <div class="card__number">12 Today</div>
+    </div>
+  </div>
+</section>
 
 </body>
 
