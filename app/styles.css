@@ -87,19 +87,27 @@ h1 {
     }
 }
 
-input[type="radio"] {
+/* inputs */
+
+#light {
     opacity: 0;
     margin: 0;
+    position: absolute;
+    left: 32px;
+    top:5px;
+}
+
+#dark {
+    opacity: 0;
+    margin: 0;
+    position: absolute;
+    left: 5px;
+    top: 5px;
 }
 
 input[type="radio"]:focus ~ .toggle__button {
     border: 2px solid
 }
-
-
-/*  */
-/*  */
-/*  */
 
 #dark:checked ~ .toggle__button {
     right: 100%;
@@ -118,20 +126,12 @@ input[type="radio"]:focus ~ .toggle__button {
   }
 
 label[for="dark"] {
-    grid-column: 1 / 2;
     justify-self: center;
-}
-
-label[for="system"] {
-    grid-column: 2 / 3;
-    grid-row: 3 / 3;
-    justify-self: center;
-    padding-top: 10px;
-}
-
-label[for="light"] {
-    grid-column: 3 / 4;
-    justify-self: center;
+    margin-right: 13px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--toggle);
 }
 
 /* icons */
@@ -265,8 +265,9 @@ label[for="light"] {
 .toggle {
     border: none;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* position: relative; */
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr 0fr); */
 }
 
 .toggle__button {
@@ -286,8 +287,7 @@ label[for="light"] {
     background: linear-gradient(225deg, var(--toggle-bg-start), var(--toggle-bg-end));
     display: block;
     border-radius: 12px;
-    position: absolute;
-    width: 100%; /*48 px wide with just two options*/
+    width: 48px; /*48 px wide with just two options*/
     top: 0;
     pointer-events: none;
 }
@@ -310,9 +310,25 @@ label[for="light"] {
     color: var(--dark-text1);
 }
 
+.toggle__header {
+    margin: 36px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 @media screen and (min-width: 992px){
     
     .header {
-        margin-top: 36px;
+        margin: 36px 0 0 0 ;
+    }
+
+    .toggle__header {
+        display: flex;
+        width: 50%;
+        justify-content: end;
+        align-items: center;
     }
 }
