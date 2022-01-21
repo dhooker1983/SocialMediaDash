@@ -74,17 +74,16 @@ body {
     #button {
         background: var(--dark-bg);
     }
+
+    #subHeader {
+        color: var(--dark-text2)
+    }
 }
 
 a, a:visited a:active {
     text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark){
-    body {
-        background: var(--dark-bg);
-    }
-}
 
 /* typography */
 
@@ -96,6 +95,10 @@ h1, h2, h3 {
 h1 {
     font-size: 24px;
     margin-bottom: 3px;
+}
+
+.subHeader {
+    color: var(--light-text1);
 }
 
 @media screen and (min-width: 992px) {
@@ -368,4 +371,10 @@ label[for="dark"] {
         justify-content: end;
         align-items: center;
     }
+}
+
+.likes {
+    font-size: 14px;
+    font-weight: bold;
+    color: ;
 }
