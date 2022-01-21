@@ -17,11 +17,19 @@
     --dark-card: hsl(228, 28%, 20%);
     --dark-text1: hsl(228, 34%, 66%);
     --dark-text2: hsl(0, 0%, 100%);
-    --light-gb: hsl(0, 0%, 100%);
+    --light-bg: hsl(0, 0%, 100%);
     --light-top-bg: hsl(225, 100%, 98%);
     --light-card: hsl(227, 47%, 96%);
     --light-text1: hsl(228, 12%, 44%);
     --light-text2: hsl(230, 17%, 14%);
+
+    --background: var(--light-bg);
+    --text-color: var(--light-text1);
+    --text-color2: var(--light-text2);
+    --card-count: var(--light-text2);
+    --card-bg: var(--light-top-bg);
+
+
 
     /* fonts */
     --font-inter: 'Inter', sans-serif;
@@ -41,12 +49,41 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-inter);
-    background: var(--dark-bg);
-    color: var(--dark-text2);
+    background: var(--background);
+    color: var(--text-color2);
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        background: var(--dark-bg);
+        color: var(--dark-text2);
+    }
+
+    #subtitle {
+        color: var(--dark-text1);
+    }
+
+    #card {
+        background-color: var(--dark-card);
+    }
+
+    #user {
+        color: var(--dark-text1);
+    }
+
+    #button {
+        background: var(--dark-bg);
+    }
 }
 
 a, a:visited a:active {
     text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        background: var(--dark-bg);
+    }
 }
 
 /* typography */
@@ -139,7 +176,7 @@ label[for="dark"] {
 /* card */
 
 .card {
-    background: var(--dark-card);
+    background-color: var(--card-bg);
     width: 255px;
     text-align: center;
     padding: 25px;
@@ -153,7 +190,7 @@ label[for="dark"] {
         margin-bottom: 0;
         width: 22.5%;
     }
-}
+} 
 
 .card--fb {
     border-top: 5px solid var(--facebook);
@@ -195,7 +232,7 @@ label[for="dark"] {
 }
 
 .card__count {
-    color: var(--dark-text2);
+    color: var(--card-count);
     align-items: center;
     letter-spacing: -2px;
     line-height: 1;
@@ -257,7 +294,7 @@ label[for="dark"] {
 .card__username {
     font-weight: bold;
     font-size: 12px;
-    color: var(--dark-text1);
+    color: var(--light-text1);
 }
 
 /* toggle */
@@ -278,7 +315,7 @@ label[for="dark"] {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-color: var(--dark-bg);
+    background-color: var(--light-bg);
     transition: all 150ms ease-in-out;
 }
 
@@ -307,7 +344,7 @@ label[for="dark"] {
 .header__subtitle {
     font-size: 14px;
     font-weight: 700;
-    color: var(--dark-text1);
+    color: var(--light-text1);
 }
 
 .toggle__header {
