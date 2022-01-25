@@ -369,3 +369,87 @@ label[for="dark"] {
         align-items: center;
     }
 }
+
+.smallCard__container {
+    max-width: 550px;
+    padding: 25px;
+    margin: 10px auto;
+    align-content: center;
+    text-align: center;
+}
+
+.smallCard {
+    display: grid;
+    
+}
+
+#smallCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(100px, auto);
+    padding: 25px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 25px;
+    grid-gap: 25px;
+    border: 1px solid white;
+}
+
+.likes {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-text1);
+}
+
+.likes__count {
+    font-size: 32px;
+    color: var(--dark-text2);
+    font-weight: 700;
+    
+}
+
+.icon {
+    justify-self: end;
+}
+
+.upVote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--limegreen);
+    font-size: 12px;
+    font-weight: 700;
+    justify-self: end;
+    align-self: center;
+}
+
+#icon {
+    margin-right: 4px;
+}
+
+.downVote {
+
+}
+
+.gridWrapper {
+    display: grid;
+    max-width: 1110px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 auto;
+    gap: 23px;
+}
+
+.gridNest {
+    background: var(--dark-card);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 20px;
+    margin-bottom: 0;
+    align-content: center;
+    align-items: center;
+}
